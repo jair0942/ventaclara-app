@@ -1,0 +1,252 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  font-family: 'Outfit', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  -webkit-font-smoothing: antialiased;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* ===== MOBILE OPTIMIZATIONS ===== */
+@media (max-width: 768px) {
+  input, select, textarea, button {
+    font-size: 16px !important;
+  }
+  button {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* ===== ANIMACIONES ===== */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideDown {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes scaleIn {
+  from { opacity: 0; transform: scale(0.9); }
+  to { opacity: 1; transform: scale(1); }
+}
+
+@keyframes bounceIn {
+  0% { transform: scale(0); }
+  50% { transform: scale(1.1); }
+  100% { transform: scale(1); }
+}
+
+@keyframes pulseSoft {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.7; }
+}
+
+@keyframes checkmark {
+  0% { transform: scale(0) rotate(0deg); }
+  50% { transform: scale(1.2) rotate(5deg); }
+  100% { transform: scale(1) rotate(0deg); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-8px); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slideUp {
+  animation: slideUp 0.4s ease-out;
+}
+
+.animate-slideDown {
+  animation: slideDown 0.3s ease-out;
+}
+
+.animate-scaleIn {
+  animation: scaleIn 0.2s ease-out;
+}
+
+.animate-bounceIn {
+  animation: bounceIn 0.5s ease-out;
+}
+
+.animate-checkmark {
+  animation: checkmark 0.5s ease-out;
+}
+
+.animate-pulseSoft {
+  animation: pulseSoft 2s ease-in-out infinite;
+}
+
+.animate-float {
+  animation: float 3s ease-in-out infinite;
+}
+
+/* ===== TOAST NOTIFICATIONS ===== */
+.toast {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  z-index: 9999;
+  padding: 14px 24px;
+  border-radius: 12px;
+  color: white;
+  font-weight: 600;
+  font-size: 14px;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.2);
+  animation: slideDown 0.3s ease-out;
+  backdrop-filter: blur(10px);
+}
+
+.toast-success {
+  background: linear-gradient(135deg, #22C55E, #16A34A);
+}
+
+.toast-error {
+  background: linear-gradient(135deg, #EF4444, #DC2626);
+}
+
+.toast-info {
+  background: linear-gradient(135deg, #4F3B78, #6B4FA0);
+}
+
+/* ===== SKELETON LOADER ===== */
+.skeleton {
+  background: linear-gradient(90deg, #f0f0f0 25%, #e0e0e0 50%, #f0f0f0 75%);
+  background-size: 200% 100%;
+  animation: shimmer 1.5s infinite;
+  border-radius: 8px;
+}
+
+.dark .skeleton {
+  background: linear-gradient(90deg, #1A1A2E 25%, #252540 50%, #1A1A2E 75%);
+  background-size: 200% 100%;
+}
+
+/* ===== SCROLLBAR ===== */
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+}
+
+.dark ::-webkit-scrollbar-thumb {
+  background: #3A2B5A;
+}
+
+/* ===== TRANSICIONES SUAVES ===== */
+* {
+  transition-property: background-color, border-color, color, fill, stroke, opacity, box-shadow, transform;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+  transition-duration: 150ms;
+}
+
+/* ===== BOTONES MEJORADOS ===== */
+button:active {
+  transform: scale(0.97);
+}
+
+button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* ===== INPUTS MEJORADOS ===== */
+input:focus, textarea:focus, select:focus {
+  box-shadow: 0 0 0 3px rgba(79, 59, 120, 0.2);
+}
+
+.dark input:focus, .dark textarea:focus {
+  box-shadow: 0 0 0 3px rgba(107, 79, 160, 0.3);
+}
+
+/* ===== TARJETAS ===== */
+.card {
+  @apply bg-white/90 dark:bg-card-dark/70 rounded-3xl shadow-xl border border-white/40 dark:border-white/5 backdrop-blur-xl transition-all duration-300;
+}
+
+.card-hover:hover {
+  @apply shadow-2xl transform -translate-y-1 border-primary/20 dark:border-primary/20 bg-white/95 dark:bg-card-dark/80;
+}
+
+/* ===== MOBILE NAV ACTIVE STATE ===== */
+.mobile-nav-item {
+  @apply flex flex-col items-center justify-center gap-1 flex-1 h-full transition-all;
+}
+
+.mobile-nav-item.active {
+  @apply text-primary scale-105;
+}
+
+.mobile-nav-item.inactive {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+/* ===== DARK MODE TOGGLE FLOATING ===== */
+.dark-toggle-mobile {
+  @apply fixed top-4 right-4 z-50 w-12 h-12 rounded-full shadow-lg flex items-center justify-center text-xl transition-all duration-300 hover:scale-110;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (min-width: 768px) {
+  .max-w-lg {
+    max-width: 768px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .max-w-lg {
+    max-width: 900px;
+  }
+}
+
+/* ===== TABLE STYLES FOR CSV PREVIEW ===== */
+.csv-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.csv-table th {
+  @apply bg-primary text-white font-semibold text-left p-3 text-sm;
+}
+
+.csv-table td {
+  @apply p-3 border-b border-gray-200 dark:border-gray-700 text-sm;
+}
+
+.csv-table tr:hover {
+  @apply bg-gray-50 dark:bg-gray-800/50;
+}
+
+/* ===== GRADIENT TEXT ===== */
+.gradient-text {
+  @apply bg-gradient-to-r from-primary to-primary-light bg-clip-text text-transparent;
+}

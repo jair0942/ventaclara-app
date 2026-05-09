@@ -1,0 +1,16 @@
+{
+  "name": "VentaClara",
+  "short_name": "VentaClara",
+  "description": "App para gestionar ventas de tiendas de ropa",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#F8F8F8",
+  "theme_color": "#4F3B78",
+  "icons": [
+    {
+      "src": "data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' fill='%234F3B78'/><text y='70' x='50' font-size='60' text-anchor='middle' fill='white'>V</text></svg>",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}

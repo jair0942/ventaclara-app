@@ -30,7 +30,7 @@ export default function Dashboard() {
   };
 
   // Colores para gráficas
-  const COLORS = ['#4F46E5', '#10B981', '#F59E0B', '#818CF8', '#EF4444'];
+  const COLORS = ['#0EA5E9', '#2DD4BF', '#10B981', '#F59E0B', '#F43F5E'];
 
   return (
     <div className="animate-fadeIn">
@@ -85,8 +85,8 @@ export default function Dashboard() {
           titulo="Este mes"
           valor={formatCOP(totalMes)}
           icono="📊"
-          color="from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20"
-          border="border-purple-200 dark:border-purple-800"
+          color="from-cyan-50 to-sky-50 dark:from-cyan-900/20 dark:to-sky-900/20"
+          border="border-cyan-200 dark:border-cyan-800"
         />
         <TarjetaResumen
           titulo="Ganancia est."
@@ -144,8 +144,8 @@ export default function Dashboard() {
             <AreaChart data={datosUltimos7Dias}>
               <defs>
                 <linearGradient id="colorVentas" x1="0" y1="0" x2="0" y2="1">
-                  <stop offset="5%" stopColor="#4F46E5" stopOpacity={0.8}/>
-                  <stop offset="95%" stopColor="#4F46E5" stopOpacity={0}/>
+                  <stop offset="5%" stopColor="#0EA5E9" stopOpacity={0.8}/>
+                  <stop offset="95%" stopColor="#0EA5E9" stopOpacity={0}/>
                 </linearGradient>
               </defs>
               <XAxis dataKey="dia" tick={{ fontSize: 11, fill: '#6B7280' }} />
@@ -159,7 +159,7 @@ export default function Dashboard() {
               <Area
                 type="monotone"
                 dataKey="total"
-                stroke="#4F46E5"
+                stroke="#0EA5E9"
                 fillOpacity={1}
                 fill="url(#colorVentas)"
                 strokeWidth={2}
@@ -232,13 +232,13 @@ export default function Dashboard() {
 function TarjetaResumen({ titulo, valor, subtitulo, icono, color, border }) {
   // Extraemos los colores para usar en sombras sutiles
   const gradientClass = color.includes('green') ? 'from-emerald-500/10 to-emerald-500/5 dark:from-emerald-400/10 dark:to-emerald-400/5' :
-                        color.includes('blue') ? 'from-indigo-500/10 to-indigo-500/5 dark:from-indigo-400/10 dark:to-indigo-400/5' :
-                        color.includes('purple') ? 'from-purple-500/10 to-purple-500/5 dark:from-purple-400/10 dark:to-purple-400/5' :
+                        color.includes('blue') ? 'from-sky-500/10 to-sky-500/5 dark:from-sky-400/10 dark:to-sky-400/5' :
+                        color.includes('cyan') ? 'from-cyan-500/10 to-cyan-500/5 dark:from-cyan-400/10 dark:to-cyan-400/5' :
                         'from-amber-500/10 to-amber-500/5 dark:from-amber-400/10 dark:to-amber-400/5';
 
   const iconBg = color.includes('green') ? 'bg-emerald-100 dark:bg-emerald-500/20 text-emerald-600 dark:text-emerald-400' :
-                 color.includes('blue') ? 'bg-indigo-100 dark:bg-indigo-500/20 text-indigo-600 dark:text-indigo-400' :
-                 color.includes('purple') ? 'bg-purple-100 dark:bg-purple-500/20 text-purple-600 dark:text-purple-400' :
+                 color.includes('blue') ? 'bg-sky-100 dark:bg-sky-500/20 text-sky-600 dark:text-sky-400' :
+                 color.includes('cyan') ? 'bg-cyan-100 dark:bg-cyan-500/20 text-cyan-600 dark:text-cyan-400' :
                  'bg-amber-100 dark:bg-amber-500/20 text-amber-600 dark:text-amber-400';
 
   return (

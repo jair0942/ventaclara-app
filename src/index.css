@@ -9,6 +9,15 @@ body {
   font-size: 16px;
   -webkit-font-smoothing: antialiased;
   transition: background-color 0.3s ease, color 0.3s ease;
+  background-color: var(--tw-bg-opacity, #F8FAFC);
+}
+
+.dark body {
+  background-color: #020617;
+  background-image: 
+    radial-gradient(at 0% 0%, rgba(14, 165, 233, 0.05) 0px, transparent 50%),
+    radial-gradient(at 100% 0%, rgba(45, 212, 191, 0.05) 0px, transparent 50%);
+  background-attachment: fixed;
 }
 
 /* ===== MOBILE OPTIMIZATIONS ===== */
@@ -127,7 +136,7 @@ body {
 }
 
 .toast-info {
-  background: linear-gradient(135deg, #4F3B78, #6B4FA0);
+  background: linear-gradient(135deg, #0369A1, #0EA5E9);
 }
 
 /* ===== SKELETON LOADER ===== */
@@ -139,7 +148,7 @@ body {
 }
 
 .dark .skeleton {
-  background: linear-gradient(90deg, #1A1A2E 25%, #252540 50%, #1A1A2E 75%);
+  background: linear-gradient(90deg, #0F172A 25%, #1E293B 50%, #0F172A 75%);
   background-size: 200% 100%;
 }
 
@@ -158,7 +167,7 @@ body {
 }
 
 .dark ::-webkit-scrollbar-thumb {
-  background: #3A2B5A;
+  background: #1E293B;
 }
 
 /* ===== TRANSICIONES SUAVES ===== */
@@ -181,20 +190,22 @@ button:disabled {
 
 /* ===== INPUTS MEJORADOS ===== */
 input:focus, textarea:focus, select:focus {
-  box-shadow: 0 0 0 3px rgba(79, 59, 120, 0.2);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.2);
+  border-color: #0EA5E9;
 }
 
 .dark input:focus, .dark textarea:focus {
-  box-shadow: 0 0 0 3px rgba(107, 79, 160, 0.3);
+  box-shadow: 0 0 0 3px rgba(14, 165, 233, 0.3);
+  border-color: #38BDF8;
 }
 
 /* ===== TARJETAS ===== */
 .card {
-  @apply bg-white/90 dark:bg-card-dark/70 rounded-3xl shadow-xl border border-white/40 dark:border-white/5 backdrop-blur-xl transition-all duration-300;
+  @apply bg-white/95 dark:bg-card-dark/80 rounded-2xl shadow-xl border border-slate-200 dark:border-white/5 backdrop-blur-xl transition-all duration-300;
 }
 
 .card-hover:hover {
-  @apply shadow-2xl transform -translate-y-1 border-primary/20 dark:border-primary/20 bg-white/95 dark:bg-card-dark/80;
+  @apply shadow-2xl transform -translate-y-1 border-primary/30 dark:border-primary/20 bg-white dark:bg-card-dark/90;
 }
 
 /* ===== MOBILE NAV ACTIVE STATE ===== */

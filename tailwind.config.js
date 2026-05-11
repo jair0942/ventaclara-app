@@ -8,16 +8,17 @@ export default {
   theme: {
     extend: {
       colors: {
-        primary: '#4F46E5', // Indigo 600
-        'primary-light': '#818CF8', // Indigo 400
-        'primary-dark': '#3730A3', // Indigo 800
+        primary: '#0EA5E9', // Sky 500
+        'primary-light': '#38BDF8', // Sky 400
+        'primary-dark': '#0284C7', // Sky 600
+        accent: '#2DD4BF', // Teal 400
         success: '#10B981', // Emerald 500
-        danger: '#EF4444', // Red 500
+        danger: '#F43F5E', // Rose 500
         warning: '#F59E0B', // Amber 500
         bg: '#F8FAFC', // Slate 50
-        'bg-dark': '#0F172A', // Slate 900
-        'card-dark': '#1E293B', // Slate 800
-        'text-dark': '#F8FAFC' // Slate 50
+        'bg-dark': '#020617', // Slate 950 (Midnight)
+        'card-dark': '#0F172A', // Slate 900
+        'text-dark': '#F1F5F9' // Slate 100
       },
       fontFamily: {
         sans: ['Outfit', 'system-ui', '-apple-system', 'sans-serif']

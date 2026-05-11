@@ -1,5 +1,6 @@
 import { useLocation, Link } from 'react-router-dom';
 import { useTheme } from '../context/ThemeContext';
+import Logo from './Logo';
 
 // Barra de navegación optimizada para móvil y desktop
 export default function NavBar() {
@@ -19,9 +20,7 @@ export default function NavBar() {
       <div className="fixed md:hidden top-0 left-0 right-0 z-50 bg-white/90 dark:bg-card-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center gap-2">
-            <div className="w-8 h-8 bg-gradient-to-br from-primary to-primary-light rounded-lg flex items-center justify-center text-white font-bold text-sm shadow-md">
-              V
-            </div>
+            <Logo className="w-8 h-8" />
             <span className="font-bold text-gray-800 dark:text-text-dark text-lg">VentaClara</span>
           </Link>
 
@@ -87,9 +86,7 @@ export default function NavBar() {
         
         {/* Logo de la aplicación (Desktop) */}
         <Link to="/" className="flex items-center gap-3 mb-10 pl-2 group">
-          <div className="w-10 h-10 bg-gradient-to-br from-primary to-primary-light rounded-xl flex items-center justify-center text-white font-black text-xl shadow-lg shadow-primary/30 group-hover:scale-110 transition-transform">
-            V
-          </div>
+          <Logo className="w-10 h-10 group-hover:scale-110 transition-transform" />
           <span className="font-extrabold text-gray-900 dark:text-white tracking-tight text-2xl">VentaClara</span>
         </Link>
 

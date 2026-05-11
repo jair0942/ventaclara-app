@@ -1,12 +1,12 @@
 import React from 'react';
 
-export default function Logo({ className = "w-40", showText = false }) {
+export default function Logo({ className = "h-12 w-auto object-contain", showText = false }) {
   return (
-    <div className={`flex items-center ${className}`}>
+    <div className="flex items-center">
       <img 
         src="/logo.png" 
         alt="VentaClara Logo" 
-        className="w-full h-auto object-contain"
+        className={className}
         style={{ filter: "drop-shadow(0px 2px 4px rgba(0,0,0,0.1))" }}
       />
       {showText && (

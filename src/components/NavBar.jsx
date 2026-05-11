@@ -20,7 +20,7 @@ export default function NavBar() {
       <div className="fixed md:hidden top-0 left-0 right-0 z-50 bg-white/90 dark:bg-card-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
           <Link to="/" className="flex items-center">
-            <Logo className="w-32" />
+            <Logo className="h-10 w-auto object-contain py-1" />
           </Link>
 
           <div className="flex items-center gap-2">
@@ -85,7 +85,7 @@ export default function NavBar() {
         
         {/* Logo de la aplicación (Desktop) */}
         <Link to="/" className="flex items-center justify-center mb-10 pl-2 group">
-          <Logo className="w-48 group-hover:scale-105 transition-transform" />
+          <Logo className="h-20 w-auto object-contain group-hover:scale-105 transition-transform" />
         </Link>
 
         {/* Opciones del menú */}

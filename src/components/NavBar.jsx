@@ -19,9 +19,8 @@ export default function NavBar() {
       {/* Header superior con botón de tema mejorado (SOLO MÓVIL) */}
       <div className="fixed md:hidden top-0 left-0 right-0 z-50 bg-white/90 dark:bg-card-dark/90 backdrop-blur-md border-b border-gray-200 dark:border-gray-800 shadow-sm">
         <div className="max-w-2xl mx-auto px-4 h-14 flex items-center justify-between">
-          <Link to="/" className="flex items-center gap-2">
-            <Logo className="w-8 h-8" />
-            <span className="font-bold text-gray-800 dark:text-text-dark text-lg">VentaClara</span>
+          <Link to="/" className="flex items-center">
+            <Logo className="h-8" />
           </Link>
 
           <div className="flex items-center gap-2">
@@ -85,9 +84,8 @@ export default function NavBar() {
       <nav className="hidden md:fixed md:left-0 md:top-0 md:bottom-0 md:w-64 md:bg-white/90 md:dark:bg-card-dark/90 md:backdrop-blur-xl md:border-r md:border-gray-200/50 md:dark:border-white/5 md:flex md:flex-col md:py-8 md:px-5 md:z-30">
         
         {/* Logo de la aplicación (Desktop) */}
-        <Link to="/" className="flex items-center gap-3 mb-10 pl-2 group">
-          <Logo className="w-10 h-10 group-hover:scale-110 transition-transform" />
-          <span className="font-extrabold text-gray-900 dark:text-white tracking-tight text-2xl">VentaClara</span>
+        <Link to="/" className="flex items-center mb-10 pl-2 group">
+          <Logo className="h-12 group-hover:scale-105 transition-transform" />
         </Link>
 
         {/* Opciones del menú */}

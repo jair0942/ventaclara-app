@@ -1,22 +1,21 @@
 import React from 'react';
 
-export default function Logo({ className = "w-10 h-10", showText = false }) {
+export default function Logo({ className = "h-10", showText = false }) {
+  // Nota: El logo proporcionado es horizontal y tiene fondo blanco.
+  // Lo envolvemos en un contenedor controlado para que no se desborde y se vea bien en modo oscuro.
   return (
-    <div className={`flex items-center gap-3 ${className}`}>
-      <div className="relative flex-shrink-0">
-        {/* Glow effect */}
-        <div className="absolute inset-0 bg-primary/20 blur-xl rounded-full"></div>
-        
+    <div className={`flex items-center ${className}`}>
+      <div className="h-full aspect-[3/1] bg-white rounded-lg p-1.5 shadow-sm overflow-hidden flex items-center justify-center">
         <img 
           src="/logo.png" 
           alt="VentaClara Logo" 
-          className="w-full h-full relative z-10 object-contain"
+          className="h-full w-full object-contain"
         />
       </div>
       
       {showText && (
-        <span className="font-extrabold text-gray-900 dark:text-white tracking-tight text-2xl">
-          Venta<span className="text-primary">Clara</span>
+        <span className="ml-3 font-extrabold text-gray-900 dark:text-white tracking-tight text-xl">
+          VentaClara
         </span>
       )}
     </div>
